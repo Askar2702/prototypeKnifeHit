@@ -17,7 +17,7 @@ public class Menu : MonoBehaviour
         else if (PlayerPrefs.HasKey("ApplyScore")) apple.text += " " + PlayerPrefs.GetInt("ApplyScore");
         if (!PlayerPrefs.HasKey("BestScore")) score.text += " " + 0;
         else if (PlayerPrefs.HasKey("BestScore")) score.text += " " + PlayerPrefs.GetInt("BestScore");
-        if (!PlayerPrefs.HasKey("Stage")) MaxLvl.text = " " + 1.ToString();
+        if (!PlayerPrefs.HasKey("Stage")) MaxLvl.text += " " + 1.ToString();
         else if (PlayerPrefs.HasKey("Stage")) MaxLvl.text += " " + PlayerPrefs.GetInt("Stage").ToString();
     }
 

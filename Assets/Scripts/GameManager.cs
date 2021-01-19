@@ -12,8 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
 
    
-    [SerializeField] private Target _target;
-    public Target target => _target;
+    public Target target { get; private set; }
     public int stage { get; private set; }
     public int appleScore { get; private set; }
 
@@ -34,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        target = GameObject.FindObjectOfType<Target>();
         gameManager = this;
         Vibration.Init();
     }
@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
     public void EndLvl()
     {
         gameState = GameState.Win;
-        Destroy(_target.gameObject);
+        Destroy(target.gameObject);
         StartCoroutine(InstanceWoodLog());
     }
 
@@ -116,12 +116,13 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2f); 
         var WoodLog = Instantiate(WoodLogPrefab, new Vector3(0f, 1f, 0), Quaternion.identity);
-        _target = WoodLog.GetComponent<Target>();
+        target = WoodLog.GetComponent<Target>(); 
+        target.notyfi += Score;
     }
     public void NextLvl()
     {
-        gameState = GameState.Play;
         nextLevel?.Invoke();
+        gameState = GameState.Play;
         stage++;
         Lvl.text = "Stage : " + stage;
         if(PlayerPrefs.GetInt("Stage") < stage)

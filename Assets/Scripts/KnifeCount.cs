@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class KnifeCount : MonoBehaviour
 {
-    
-    [SerializeField] private Target target;
+    public Text tx;
+    private Target target;
     [SerializeField] private int SetCountKnaife;
     [SerializeField] private GameObject meter;
     [SerializeField] private Color color;
     public List<GameObject> childMeter = new List<GameObject>();
     void Start()
     {
+        target = FindObjectOfType<Target>();
         target.notyfi += MeterKnife;
         GameManager.gameManager.nextLevel += NextLvl;
         SpawnMeter();
@@ -22,7 +24,9 @@ public class KnifeCount : MonoBehaviour
     private void MeterKnife()
     {
         var knife = childMeter.LastOrDefault(item => item.GetComponent<SpriteRenderer>().color != color);
+        tx.text = target.ToString();
         knife.GetComponent<SpriteRenderer>().color = color;
+        childMeter.Remove(knife);
         SetCountKnaife--;
         if (SetCountKnaife <= 0)
         {
@@ -31,13 +35,12 @@ public class KnifeCount : MonoBehaviour
             target.instanceLogs();
         }
     }
-
     
+
 
     private void NextLvl()
     {
-        target = GameManager.gameManager.target;
-        target.notyfi -= MeterKnife;
+        target = FindObjectOfType<Target>();
         target.notyfi += MeterKnife;
         for (int i = 0; i < childMeter.Count; i++)
             Destroy(childMeter[i]);
