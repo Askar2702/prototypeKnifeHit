@@ -1,10 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Apple
+    - AppleSetting
     - GameManager
     - Knife
+    - KnifeCount
+    - Logs
+    - Menu
     - SpawnKnife
     - Target
+    - WoodChilds
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -58,27 +64,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11270}
     - Class: 114
-      Script: {instanceID: 11554}
+      Script: {instanceID: 11470}
     - Class: 114
-      Script: {instanceID: 11608}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 12234}
+      Script: {instanceID: 11614}
     - Class: 114
-      Script: {instanceID: 12276}
+      Script: {instanceID: 12242}
     - Class: 114
-      Script: {instanceID: 12796}
+      Script: {instanceID: 12286}
     - Class: 114
-      Script: {instanceID: 12980}
+      Script: {instanceID: 12440}
     - Class: 114
-      Script: {instanceID: 13744}
+      Script: {instanceID: 12810}
     - Class: 114
-      Script: {instanceID: 13838}
+      Script: {instanceID: 12994}
     - Class: 114
-      Script: {instanceID: 13894}
+      Script: {instanceID: 13246}
     - Class: 114
-      Script: {instanceID: 14360}
+      Script: {instanceID: 13434}
+    - Class: 114
+      Script: {instanceID: 13654}
+    - Class: 114
+      Script: {instanceID: 13766}
+    - Class: 114
+      Script: {instanceID: 13860}
+    - Class: 114
+      Script: {instanceID: 13916}
+    - Class: 114
+      Script: {instanceID: 14384}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -88,6 +104,55 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
     - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11270}
+    - Class: 114
+      Script: {instanceID: 11560}
+    - Class: 114
+      Script: {instanceID: 11614}
+    - Class: 114
+      Script: {instanceID: 12286}
+    - Class: 114
+      Script: {instanceID: 12994}
+    - Class: 114
+      Script: {instanceID: 13230}
+    - Class: 114
+      Script: {instanceID: 13766}
+    - Class: 114
+      Script: {instanceID: 14384}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -134,6 +199,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Logs
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -298,6 +369,12 @@ ScriptsOnlyBuild:
     className: Knife
   - hash:
       serializedVersion: 2
+      Hash: e033d3a34c6465c4e895d4cb3bae2a1b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VibrationExample
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -322,6 +399,12 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AnimationWoodLog
+  - hash:
+      serializedVersion: 2
       Hash: 5cc439bf63c0539d39588e69465ac2ab
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -338,6 +421,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: fc5a5b3cba5118cc74e60b64db1f139e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WoodChilds
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -364,7 +453,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: cb94d1cfad8ed80973bfe30f646b6b18
+      Hash: 5459c593e0d39c5667b79a8a1b2fcc59
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Target
@@ -398,6 +487,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 3cc78cd192483e740c19c9d2758948cd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
+  - hash:
+      serializedVersion: 2
+      Hash: 07130624d9a9ded9dd9e1ddae91e8a00
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Apple
   - hash:
       serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
@@ -454,10 +555,22 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 49b6ccb1b12d3a71c471dfbe04d87128
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AppleSetting
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: f45487514d826b29e07d5553d55912b2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KnifeCount
   - hash:
       serializedVersion: 2
       Hash: 6939772cb3ce775a8e8d99f332534491
@@ -484,7 +597,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 10fcb518b5ff05046a79a70378677577
+      Hash: 61a9bead2580f3be82533b15562cea21
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -602,13 +715,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: e033d3a34c6465c4e895d4cb3bae2a1b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VibrationExample
   platform: 13
   scenePathNames:
+  - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
   playerPath: D:/GameProject/KnifeHit/KnifeHit.apk
