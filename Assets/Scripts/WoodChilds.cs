@@ -19,11 +19,9 @@ public class WoodChilds : MonoBehaviour
     private void Chance()
     {
         var _chance = Random.Range(0, 100);
-        Debug.Log(_chance);
         if (_chance <= appleSetting.SettingChance)
         {
             var index = Random.Range(0, AppleChilds.Length);
-            print(AppleChilds.Length);
             for (int i = 0; i < index; i++)
             {
                 AppleChilds[i].SetActive(true);

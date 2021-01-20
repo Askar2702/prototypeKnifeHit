@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class KnifeCount : MonoBehaviour
 {
-    public Text tx;
     private Target target;
     [SerializeField] private int SetCountKnaife;
     [SerializeField] private GameObject meter;
@@ -24,15 +23,15 @@ public class KnifeCount : MonoBehaviour
     private void MeterKnife()
     {
         var knife = childMeter.LastOrDefault(item => item.GetComponent<SpriteRenderer>().color != color);
-        tx.text = target.ToString();
         knife.GetComponent<SpriteRenderer>().color = color;
-        childMeter.Remove(knife);
         SetCountKnaife--;
         if (SetCountKnaife <= 0)
         {
             SetCountKnaife = 10;
             GameManager.gameManager.EndLvl();
-            target.instanceLogs();
+            target.instanceLogs(); for (int i = 0; i < childMeter.Count; i++)
+                Destroy(childMeter[i]);
+            childMeter.Clear();
         }
     }
     
@@ -42,13 +41,13 @@ public class KnifeCount : MonoBehaviour
     {
         target = FindObjectOfType<Target>();
         target.notyfi += MeterKnife;
-        for (int i = 0; i < childMeter.Count; i++)
-            Destroy(childMeter[i]);
+        
         SpawnMeter();
     }
     public void SetKnaifeCount(int count)
     {
         SetCountKnaife = 10 - count;
+        Debug.Log(SetCountKnaife);
     }
 
     private void SpawnMeter()
